@@ -1,7 +1,6 @@
 package compulsory.Java11.entity;
 
 import javax.persistence.Id;
-import java.util.Date;
 
 /**
  * I created it as it was required in the compulsory part
