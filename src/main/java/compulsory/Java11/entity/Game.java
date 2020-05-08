@@ -1,5 +1,6 @@
 package compulsory.Java11.entity;
 
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -7,31 +8,41 @@ import java.util.Date;
  * It only contains information about the players, a text representing the content of the game, the date and the result
  */
 public class Game {
-        private long id1;
-        private long id2;
-        private Date date;
+        @Id
+        private String id;
+        private String contentOfTheGame;
+        private String date;
+        private String result;
 
-        public void setId1(long id1) {
-            this.id1 = id1;
+        public String getId() {
+            return id;
         }
 
-        public void setId2(long id2) {
-            this.id2 = id2;
+        public void setId(String id) {
+            this.id = id;
         }
 
-        public long getId1() {
-            return id1;
+        public String getContentOfTheGame() {
+            return contentOfTheGame;
         }
 
-        public long getId2() {
-            return id2;
+        public void setContentOfTheGame(String contentOfTheGame) {
+            this.contentOfTheGame = contentOfTheGame;
         }
 
-        public Date getData() {
+        public String getDate() {
             return date;
         }
 
-        public void setData(Date date) {
+        public void setDate(String date) {
             this.date = date;
+        }
+
+        public String getResult() {
+            return result;
+        }
+
+        public void setResult(String result) {
+            this.result = result;
         }
 }
